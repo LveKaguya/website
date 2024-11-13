@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #181c1c;
@@ -26,24 +36,34 @@ a {
 }
 
 header {
-    background-color: #282828;
-    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
 }
 
-header nav ul li a {
+nav ul li a {
     color: white;
-    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    color: rgb(255, 115, 0);
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
 }
+
 
 main {
     flex-grow: 1;
@@ -160,7 +180,7 @@ a {
 }
 
 header {
-    background-color: #333;
+    background-color: #282828;
     padding: 20px;
 }
 
@@ -185,12 +205,7 @@ main {
     text-align: center;
 }
 
-footer {
-    padding: 20px;
-    background-color: #333;
-    text-align: center;
-    color: #ffffff;
-}
+
 
 /* Video Section */
 .course-section {
@@ -308,7 +323,7 @@ body {
 /*greetings app */
 #greet-btn {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color:#282828;
     color: white;
     border: none;
     border-radius: 5px;
@@ -316,7 +331,7 @@ body {
 }
 
 #greets-btn:hover {
-    background-color: #0056b3;
+    background-color: #282828;
 }
 
 #greeting-message {
@@ -524,4 +539,98 @@ button:hover {
     font-weight: bold;
     padding: 10px;
     margin: 0px;
+}
+/* General styling for the recommended books section */
+.recommended-books {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Style for the section title */
+.recommended-books h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+/* Flex layout for book items */
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Individual book item styling */
+.book-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.book-item:hover {
+    transform: scale(1.05);
+}
+
+/* Book cover image */
+.book-cover {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Book info area */
+.book-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Book title styling */
+.book-info h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+/* Author name styling */
+.book-info p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.25rem 0;
+}
+
+/* Book description styling */
+.book-description {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+
+/* Buy button styling */
+.buy-button {
+    background-color: #ff6347;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.buy-button:hover {
+    background-color: #e55347;
 }
